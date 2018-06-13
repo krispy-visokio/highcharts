@@ -688,7 +688,7 @@ seriesType('column', 'line', {
                 this.color || fill, // set to fill when borderColor null
             strokeWidth = (point && point[strokeWidthOption]) ||
                 options[strokeWidthOption] || this[strokeWidthOption] || 0,
-            dashstyle = options.dashStyle,
+            dashstyle = (point && point.dashStyle) || options.dashStyle,
             zone,
             brightness;
 
